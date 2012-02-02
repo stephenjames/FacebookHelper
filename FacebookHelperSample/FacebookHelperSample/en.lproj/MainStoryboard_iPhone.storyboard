@@ -62,7 +62,6 @@
                                 </state>
                                 <connections>
                                     <action selector="doFacebookLogout:" destination="t2H-sz-mm3" eventType="touchUpInside" id="eRq-MR-iQV"/>
-                                    <action selector="doFacebookPost:" destination="t2H-sz-mm3" eventType="touchUpInside" id="6Jt-Jc-Opp"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" id="iqg-do-pwp">
@@ -137,6 +136,25 @@
             <point key="canvasLocation" x="853" y="79"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="FacebookDialogViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FacebookDialogViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelButtonTouched:"/>
+                <relationship kind="action" name="postButtonTouched:"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="MasterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doFacebookLogout:"/>
+                <relationship kind="action" name="doFacebookPost:"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

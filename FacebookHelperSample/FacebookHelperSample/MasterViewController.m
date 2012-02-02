@@ -9,7 +9,6 @@
 #import "MasterViewController.h"
 
 @implementation MasterViewController
-@synthesize doFacebookLogout;
 @synthesize label;
 @synthesize imageView;
 
@@ -26,7 +25,6 @@
   [self setLabel:nil];
 
   [self setImageView:nil];
-  [self setDoFacebookLogout:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
