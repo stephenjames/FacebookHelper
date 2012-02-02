@@ -1,6 +1,10 @@
 Simple wrapper around facebook-ios-sdk to allow posting to a Facebook feed from iOS5
 
-See the sample project for setup.  Some notes:
+To pull down run
+git clone --recursive -b master git@github.com:stephenjames/FacebookHelper.git
+
+
+See the sample project for setup /FacebookHelperSample.  Some notes:
 
 1.  The FacebookHelper instance is access via the application delegate.  You need to setup an ivar.
 
@@ -13,3 +17,5 @@ FacebookHelper *helper=[FacebookHelper helper];
 which will respond via the delegate method below
 -(void) didWriteToFacebookFeed:(FacebookHelper *)helper withFacebookUsername:(NSString *)username andProfilePicture:(UIImage *)profilePicture;
  
+
+4. The sample project has the facebook-ios-sdk setup as a git submodule
