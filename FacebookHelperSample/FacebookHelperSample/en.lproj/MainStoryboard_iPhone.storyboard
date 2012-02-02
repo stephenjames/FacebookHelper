@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="11">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+                <navigationController id="3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="t2H-sz-mm3" kind="relationship" relationship="rootViewController" id="ZpJ-7u-z7U"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1" y="64"/>
+        </scene>
+        <scene sceneID="5HZ-ug-6wV">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGO-YE-Lnd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="t2H-sz-mm3" customClass="MasterViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PiS-9G-QXX">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Facebook Helper" lineBreakMode="tailTruncation" minimumFontSize="10" id="iAs-RT-9D6">
+                                <rect key="frame" x="94" y="10" width="131" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sWJ-ag-8Ei">
+                                <rect key="frame" x="82" y="193" width="156" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Do Facebook Post">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doFacebookPost:" destination="t2H-sz-mm3" eventType="touchUpInside" id="wx1-Rb-d5x"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" id="iqg-do-pwp">
+                                <rect key="frame" x="40" y="40" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WvN-DA-G98"/>
+                    <connections>
+                        <outlet property="imageView" destination="iqg-do-pwp" id="rik-SH-cvZ"/>
+                        <outlet property="label" destination="iAs-RT-9D6" id="CNO-Sj-Eky"/>
+                        <segue destination="UYk-nE-s8b" kind="modal" identifier="FacebookDialog" id="7KK-d9-SXy"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="449" y="71"/>
+        </scene>
+        <scene sceneID="vdn-hm-gCE">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VEq-W9-70Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Dn1-zU-ej5" customClass="FacebookDialogViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8aA-Ci-8of">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello Facebook" id="OwC-TG-c6d">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Facebook Post" id="Hma-fS-G04">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="awo-2j-8jS">
+                            <connections>
+                                <action selector="cancelButtonTouched:" destination="Dn1-zU-ej5" id="pjJ-zK-hA2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="3mq-mA-Cml">
+                            <connections>
+                                <action selector="postButtonTouched:" destination="Dn1-zU-ej5" id="VaG-k1-3ug"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="OwC-TG-c6d" id="ctd-yh-Pg8"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1379" y="79"/>
+        </scene>
+        <scene sceneID="7O8-Zi-Gel">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbR-Nj-FCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="UYk-nE-s8b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="28k-HL-dIA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dn1-zU-ej5" kind="relationship" relationship="rootViewController" id="7Rn-fM-TIH"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="853" y="79"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="FacebookDialogViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FacebookDialogViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelButtonTouched:"/>
+                <relationship kind="action" name="postButtonTouched:"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="MasterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doFacebookPost:"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

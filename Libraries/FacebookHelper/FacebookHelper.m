@@ -187,6 +187,15 @@
   }
   NSLog(@"facebook did logout");
 }
+- (void)fbDidExtendToken:(NSString*)accessToken
+               expiresAt:(NSDate*)expiresAt{
+  ;
+}
+
+- (void)fbSessionInvalidated{
+  ;
+}
+
 // **********************************************************************************************************
 #pragma mark FBRequestDelegate
 - (void)request:(FBRequest *)request didFailWithError:(NSError *)error{
@@ -269,7 +278,6 @@
   [self runWriteToFeedMachine];
   
 }
-
 
 
 @end
