@@ -1,0 +1,15 @@
+Simple wrapper around facebook-ios-sdk to allow posting to a Facebook feed from iOS5
+
+See the sample project for setup.  Some notes:
+
+1.  The FacebookHelper instance is access via the application delegate.  You need to setup an ivar.
+
+2. You need to set your Facebook application id in AppDelegate.h and FacebookHelperSample-Info.plist.  You need to apply for a Facebook application id at https://developers.facebook.com/apps
+
+3. To post a message call 
+FacebookHelper *helper=[FacebookHelper helper];
+[helper writeToFeed:message withDelegate:self];
+
+which will respond via the delegate method below
+-(void) didWriteToFacebookFeed:(FacebookHelper *)helper withFacebookUsername:(NSString *)username andProfilePicture:(UIImage *)profilePicture;
+ 

@@ -75,4 +75,9 @@
 - (IBAction)doFacebookPost:(id)sender {
   [self performSegueWithIdentifier:@"FacebookDialog" sender:sender];
 }
+
+- (IBAction)doFacebookLogout:(id)sender {
+  FacebookHelper *helper = [FacebookHelper helper];
+  [helper logout];
+}
 @end

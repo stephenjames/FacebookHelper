@@ -17,4 +17,5 @@
 
 - (IBAction)doFacebookPost:(id)sender;
 
+- (IBAction)doFacebookLogout:(id)sender;
 @end
