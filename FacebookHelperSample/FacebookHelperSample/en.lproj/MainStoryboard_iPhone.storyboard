@@ -49,6 +49,18 @@
                                     <action selector="doFacebookPost:" destination="t2H-sz-mm3" eventType="touchUpInside" id="wx1-Rb-d5x"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OdO-2F-vtY">
+                                <rect key="frame" x="82" y="243" width="156" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" id="iqg-do-pwp">
                                 <rect key="frame" x="40" y="40" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -58,6 +70,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="WvN-DA-G98"/>
                     <connections>
+                        <outlet property="doFacebookLogout" destination="OdO-2F-vtY" id="9cb-l3-bZq"/>
                         <outlet property="imageView" destination="iqg-do-pwp" id="rik-SH-cvZ"/>
                         <outlet property="label" destination="iAs-RT-9D6" id="CNO-Sj-Eky"/>
                         <segue destination="UYk-nE-s8b" kind="modal" identifier="FacebookDialog" id="7KK-d9-SXy"/>
